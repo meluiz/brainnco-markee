@@ -1,5 +1,13 @@
 /* ------| Estilos |------ */
-import { Header, Logo, LogoLink, Navigation, Wrapper } from './styles'
+import {
+  Header,
+  Logo,
+  LogoLink,
+  Navigation,
+  NavigationHeader,
+  NavigationTitle,
+  Wrapper,
+} from './styles'
 
 export const Sidebar = () => {
   return (
