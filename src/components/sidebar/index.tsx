@@ -1,7 +1,10 @@
+/* ------| Estilos |------ */
+import { Wrapper } from './styles'
+
 export const Sidebar = () => {
   return (
-    <aside>
+    <Wrapper>
       Sidebar
-    </aside>
+    </Wrapper>
   )
 }

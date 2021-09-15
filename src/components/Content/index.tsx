@@ -1,7 +1,10 @@
+/* ------| Estilos |------ */
+import { Wrapper } from './styles'
+
 export const Content = () => {
   return (
-    <main>
+    <Wrapper>
       Conteúdo
-    </main>
+    </Wrapper>
   )
 }
