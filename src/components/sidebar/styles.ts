@@ -18,3 +18,19 @@ export const Header = styled.header`
   justify-content: center;
   padding: 36px;
 `
+
+export const LogoLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`
+
+export const Logo = styled.figure`
+  min-height: 0;
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
+`
