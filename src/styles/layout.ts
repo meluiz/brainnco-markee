@@ -9,3 +9,9 @@ export const Wrapper = styled.div`
   overflow-y: auto;
   font-size: 1.6rem;
 `
+
+export const Container = styled.div`
+  height: 100%;
+  display: flex;
+  position: relative;
+`
