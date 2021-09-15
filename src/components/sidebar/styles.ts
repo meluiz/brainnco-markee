@@ -68,3 +68,9 @@ export const NavigationTitle = styled.div`${({ theme }) => css`
   padding: 0 6px;
   background-color: ${theme.colors.black};
 `}`
+
+export const NavigationActions = styled.div`
+  min-height: 0;
+  padding: 24px 0;
+  position: relative;
+`

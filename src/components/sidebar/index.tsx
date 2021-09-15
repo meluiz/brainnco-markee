@@ -4,6 +4,7 @@ import {
   Logo,
   LogoLink,
   Navigation,
+  NavigationActions,
   NavigationHeader,
   NavigationTitle,
   Wrapper,
@@ -23,6 +24,9 @@ export const Sidebar = () => {
         <NavigationHeader>
           <NavigationTitle>Arquivos</NavigationTitle>
         </NavigationHeader>
+        <NavigationActions>
+          Actions
+        </NavigationActions>
       </Navigation>
     </Wrapper>
   )
