@@ -74,3 +74,34 @@ export const NavigationActions = styled.div`
   padding: 24px 0;
   position: relative;
 `
+
+export const NavigationNewFileButton = styled.button`${({ theme }) => css`
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 0;
+  cursor: pointer;
+  background-color: ${theme.colors.primary};
+  font-size: 1.6rem;
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  transition: filter 150ms ease;
+
+  &:active { transform: scale(.97) }
+  &:hover { filter: brightness(.9) }
+`}`
+
+export const NavigationButtonIcon = styled.div`${({ theme }) => css`
+  color: ${theme.colors.lightBlack};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`}`
+
+export const NavigationButtonText = styled.div`${({ theme }) => css`
+  color: ${theme.colors.lightBlack};
+`}`
