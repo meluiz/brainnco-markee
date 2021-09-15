@@ -4,7 +4,8 @@ export const App = () => {
   return (
     <Wrapper>
       <Container>
-      Olá
+        Olá
+      </Container>
     </Wrapper>
   )
 }
