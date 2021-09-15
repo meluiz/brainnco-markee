@@ -1,5 +1,9 @@
+import { Wrapper } from 'styles/layout'
+
 export const App = () => {
   return (
-    <div>App</div>
+    <Wrapper>
+      Olá
+    </Wrapper>
   )
 }
