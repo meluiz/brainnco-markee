@@ -1,5 +1,5 @@
 /* ------| Componentes |------ */
-import { Content } from 'components/Content'
+import { Content } from 'components/content'
 import { Sidebar } from 'components/sidebar'
 
 /* ------| Estilos |------ */
