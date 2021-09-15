@@ -1,5 +1,5 @@
 /* ------| Estilos |------ */
-import { Header, Logo, LogoLink, Wrapper } from './styles'
+import { Header, Logo, LogoLink, Navigation, Wrapper } from './styles'
 
 export const Sidebar = () => {
   return (
@@ -11,6 +11,9 @@ export const Sidebar = () => {
           </Logo>
         </LogoLink>
       </Header>
+      <Navigation>
+        Navegação
+      </Navigation>
     </Wrapper>
   )
 }
