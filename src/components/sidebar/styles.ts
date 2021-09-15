@@ -41,3 +41,30 @@ export const Navigation = styled.nav`
   flex-direction: column;
   position: relative;
 `
+
+export const NavigationHeader = styled.div`${({ theme }) => css`
+  width: 100%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0; top: 50%;
+    border-radius: 999px;
+    background-color: ${theme.colors.primary};
+  }
+`}`
+
+export const NavigationTitle = styled.div`${({ theme }) => css`
+  color: ${theme.colors.white};
+  font-size: 1.6rem;
+  z-index: 1;
+  padding: 0 6px;
+  background-color: ${theme.colors.black};
+`}`
