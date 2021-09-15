@@ -34,3 +34,10 @@ export const Logo = styled.figure`
     max-width: 100%;
   }
 `
+
+export const Navigation = styled.nav`
+  display: flex;
+  padding: 8px 32px;
+  flex-direction: column;
+  position: relative;
+`
