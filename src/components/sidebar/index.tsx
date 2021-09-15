@@ -20,7 +20,9 @@ export const Sidebar = () => {
         </LogoLink>
       </Header>
       <Navigation>
-        Navegação
+        <NavigationHeader>
+          <NavigationTitle>Arquivos</NavigationTitle>
+        </NavigationHeader>
       </Navigation>
     </Wrapper>
   )
