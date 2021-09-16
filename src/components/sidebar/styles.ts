@@ -73,27 +73,9 @@ export const NavigationActions = styled.div`
   min-height: 0;
   padding: 24px 0;
   position: relative;
+
+  button { width: 100% }
 `
-
-export const NavigationNewFileButton = styled.button`${({ theme }) => css`
-  width: 100%;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  border: 0;
-  border-radius: 4px;
-  padding: 8px 0;
-  cursor: pointer;
-  background-color: ${theme.colors.primary};
-  font-size: 1.6rem;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-  transition: filter 150ms ease;
-
-  &:active { transform: scale(.97) }
-  &:hover { filter: brightness(.9) }
-`}`
 
 export const NavigationButtonIcon = styled.div`${({ theme }) => css`
   color: ${theme.colors.lightBlack};
@@ -105,3 +87,82 @@ export const NavigationButtonIcon = styled.div`${({ theme }) => css`
 export const NavigationButtonText = styled.div`${({ theme }) => css`
   color: ${theme.colors.lightBlack};
 `}`
+
+export const NavigationList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 8px;
+`
+
+export const NavigationListItem = styled.li`
+  width: 100%;
+  position: relative;
+`
+
+export const NavigationListLink = styled.a`${({ theme }) => css`
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 8px 14px;
+  text-decoration: none;
+  position: relative;
+  
+  &:hover {
+    background-color: ${theme.colors.lightBlack};
+  }
+
+  &:focus {
+    outline: none;
+  }
+`}`
+
+export const NavigationListLinkFilename = styled.div`${({ theme }) => css`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+
+  .icon {
+    color: rgba(255, 255, 255, .65);
+  }
+
+  .text {
+    color: rgba(255, 255, 255, .65);
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  ${NavigationListLink}:hover & {
+    .icon {
+      color: ${theme.colors.white};
+    }
+
+    .text {
+      color: ${theme.colors.white};
+    }
+  }
+`}`
+
+export const NavigationListLinkStats = styled.div`
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  button {
+    width: 72%;
+    height: 72%;
+  }
+`
