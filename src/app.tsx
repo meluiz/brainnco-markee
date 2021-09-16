@@ -22,7 +22,7 @@ export const App = () => {
       id: '11d6b24b-a886-43e1-8b8f-bfd6d035ea96',
       name: 'None.md',
       content: '',
-      active: false,
+      active: true,
       status: 'none',
     },
     {
