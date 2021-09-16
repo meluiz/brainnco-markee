@@ -95,10 +95,21 @@ export const NavigationList = styled.ul`
   gap: 8px;
 `
 
-export const NavigationListItem = styled.li`
+export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, active }) => css`
   width: 100%;
   position: relative;
-`
+
+  ${active && css`
+    & ${NavigationListLink} {
+      background-color: ${theme.colors.lightBlack};
+
+      &:hover ${NavigationListLinkFilename} .icon,
+      ${NavigationListLinkFilename} .icon {
+        color: ${theme.colors.primary};
+      }
+    }
+  `}
+`}`
 
 export const NavigationListLink = styled.a`${({ theme }) => css`
   width: 100%;
