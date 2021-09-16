@@ -157,9 +157,21 @@ export const NavigationListLinkStats = styled.div`
   justify-content: center;
   flex-shrink: 0;
   flex-grow: 0;
+  position: relative;
 
   button {
-    width: 72%;
-    height: 72%;
+    width: 75%;
+    height: 75%;
+    display: none;
+  }
+
+  ${NavigationListLink}:hover & > button {
+    visibility: visible;
+    pointer-events: initial;
+    display: flex;
+  }
+
+  ${NavigationListLink}:hover & > div {
+    display: none;
   }
 `
