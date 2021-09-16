@@ -50,7 +50,7 @@ export const App = () => {
   return (
     <Wrapper>
       <Container>
-        <Sidebar />
+        <Sidebar files={files} />
         <Content />
       </Container>
     </Wrapper>
