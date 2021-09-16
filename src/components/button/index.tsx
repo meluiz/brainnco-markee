@@ -1,5 +1,8 @@
 import { ReactNode } from 'react'
 
+/* ------| Estilos |------ */
+import { Btn } from './styles'
+
 /* ------| Tipagem |------ */
 type ButtonType = {
   children?: ReactNode
@@ -7,6 +10,8 @@ type ButtonType = {
 
 export const Button = ({ children }: ButtonType) => {
   return (
-    <button />
+    <Btn>
+      {children}
+    </Btn>
   )
 }
