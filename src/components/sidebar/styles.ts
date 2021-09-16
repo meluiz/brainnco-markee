@@ -128,12 +128,12 @@ export const NavigationListLinkFilename = styled.div`${({ theme }) => css`
   gap: 12px;
   overflow: hidden;
 
-  .icon {
+  .icon,
+  .text {
     color: rgba(255, 255, 255, .65);
   }
 
   .text {
-    color: rgba(255, 255, 255, .65);
     max-width: 100%;
     overflow: hidden;
     position: relative;
@@ -142,10 +142,7 @@ export const NavigationListLinkFilename = styled.div`${({ theme }) => css`
   }
 
   ${NavigationListLink}:hover & {
-    .icon {
-      color: ${theme.colors.white};
-    }
-
+    .icon,
     .text {
       color: ${theme.colors.white};
     }
