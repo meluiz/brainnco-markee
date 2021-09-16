@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
 import { FileStats } from 'components/filestats'
@@ -99,7 +97,7 @@ export const Sidebar = () => {
                     <path d='M10 9.88062H9H8' stroke='currentColor' strokeOpacity='0.65' strokeLinecap='round' strokeLinejoin='round' />
                   </svg>
                 </div>
-                <span className='text'>READMEdasdasdasdasdsadsadasdsadas.md</span>
+                <span className='text'>Content.md</span>
               </NavigationListLinkFilename>
               <NavigationListLinkStats>
                 <Button styleType='none'>
@@ -107,6 +105,7 @@ export const Sidebar = () => {
                     <path d='M1.5 0.880615L9.18 8.56061M9.5 0.880615L1.82 8.56061' stroke='white' strokeWidth='1.5' strokeLinecap='round' />
                   </svg>
                 </Button>
+                <FileStats stats='none' />
               </NavigationListLinkStats>
             </NavigationListLink>
           </NavigationListItem>
