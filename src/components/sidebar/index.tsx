@@ -60,7 +60,7 @@ export const Sidebar = ({ files }: SidebarType) => {
         </NavigationActions>
         <NavigationList>
           {files && files.map((file) => (
-            <NavigationListItem key={file.id}>
+            <NavigationListItem key={file.id} active={file.active}>
               <NavigationListLink href='/#'>
                 <NavigationListLinkFilename>
                   <div className='icon'>
