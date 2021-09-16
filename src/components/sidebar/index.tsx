@@ -2,6 +2,9 @@ import { useState } from 'react'
 
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
+import { FileStats } from 'components/filestats'
+
+/* ------| Estilos |------ */
 import {
   Header,
   Logo,
