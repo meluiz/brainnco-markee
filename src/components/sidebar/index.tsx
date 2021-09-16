@@ -1,4 +1,6 @@
-/* ------| Estilos |------ */
+import { useState } from 'react'
+
+/* ------| Componentes |------ */
 import { Button } from 'components/button'
 import {
   Header,
