@@ -21,7 +21,13 @@ import {
   NavigationListLinkStats,
 } from './styles'
 
-export const Sidebar = () => {
+/* ------| Tipagem |------ */
+import { FileType } from 'app'
+type SidebarType = {
+  files: FileType[]
+}
+
+export const Sidebar = ({ files }: SidebarType) => {
   return (
     <Wrapper>
       <Header>
@@ -66,7 +72,6 @@ export const Sidebar = () => {
                       <path d='M10 9.88062H9H8' stroke='currentColor' strokeOpacity='0.65' strokeLinecap='round' strokeLinejoin='round' />
                     </svg>
                   </div>
-                <span className='text'>README.md</span>
                   <span className='text'>{file.name}</span>
                 </NavigationListLinkFilename>
                 <NavigationListLinkStats>
