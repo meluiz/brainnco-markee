@@ -172,6 +172,7 @@ export const NavigationListLinkStats = styled.div`
   }
 
   ${NavigationListLink}:hover & > div {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 `
