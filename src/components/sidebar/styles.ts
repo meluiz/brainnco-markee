@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components'
 
+/* ------| Tipagem |------ */
+type NavigationListItemType = {
+  active: boolean
+}
+
 export const Wrapper = styled.aside`${({ theme }) => css`
   width: 332px;
   height: 100%;
