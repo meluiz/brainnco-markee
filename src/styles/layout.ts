@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   display: block;
   position: relative;
   overflow: hidden;
-  overflow-y: auto;
   font-size: 1.6rem;
 `
 
