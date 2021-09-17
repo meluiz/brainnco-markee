@@ -58,7 +58,13 @@ export const Editor = styled.div`
   grid-area: Editor;
   padding-right: 12px;
   border-right: 1px solid rgba(30, 41, 59, 0.12);
-  `
+  
+  textarea {
+    width: 100%;
+    min-height: 100%;
+    line-height: 1.5;
+  }
+`
 
 export const Preview = styled.div`
   padding-left: 12px;
