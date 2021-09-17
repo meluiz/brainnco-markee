@@ -17,7 +17,7 @@ export type FileType = {
 }
 
 export const App = () => {
-  const [files, setFiles] = useState<FileType[]>([
+  const [files] = useState<FileType[]>([
     {
       id: '11d6b24b-a886-43e1-8b8f-bfd6d035ea96',
       name: 'None.md',
