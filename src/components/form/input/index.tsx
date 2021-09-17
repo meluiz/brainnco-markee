@@ -20,7 +20,7 @@ export const Input = ({ id, name, type, value, placeholder }: InputType) => {
       name={name}
       type={type}
       placeholder={placeholder}
-      value={value}
+      defaultValue={value}
     />
   )
 }
