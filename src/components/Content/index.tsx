@@ -3,7 +3,15 @@
 import { Input } from 'components/input'
 
 /* ------| Estilos |------ */
-import { Container, Header, HeaderIcon, Wrapper } from './styles'
+import {
+  Container,
+  Editor,
+  Header,
+  HeaderIcon,
+  MarkdownEditor,
+  Preview,
+  Wrapper,
+} from './styles'
 
 export const Content = () => {
   return (
@@ -19,8 +27,16 @@ export const Content = () => {
               <path d='M10 9H9H8' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
             </svg>
           </HeaderIcon>
-          <Input type='text' />
+          <Input type='text' value='README.md' />
         </Header>
+        <MarkdownEditor>
+          <Editor>
+            oláá
+          </Editor>
+          <Preview>
+            olá
+          </Preview>
+        </MarkdownEditor>
       </Container>
     </Wrapper>
   )
