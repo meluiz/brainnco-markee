@@ -32,9 +32,7 @@ export const Content = () => {
         </Header>
         <MarkdownEditor>
           <Editor>
-            <Textarea resize='none'>
-              ## Bootcamp Brainn Co.
-            </Textarea>
+            <Textarea resize='none' />
           </Editor>
           <Preview>
             olá
