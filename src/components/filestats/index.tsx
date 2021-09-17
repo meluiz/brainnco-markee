@@ -4,7 +4,7 @@ import { Editing, Wrapper } from './styles'
 
 /* ------| Tipagem |------ */
 type FileStatsType = {
-  stats: 'none' | 'editing' | 'saving' | 'saved'
+  stats: 'editing' | 'saving' | 'saved'
 }
 
 export const FileStats = ({ stats }: FileStatsType) => {
