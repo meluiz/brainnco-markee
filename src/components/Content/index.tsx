@@ -1,10 +1,15 @@
 /* ------| Estilos |------ */
-import { Wrapper } from './styles'
+import { Container, Header, Wrapper } from './styles'
 
 export const Content = () => {
   return (
     <Wrapper>
-      Conteúdo
+      <Container>
+        <Header>
+
+          Olá
+        </Header>
+      </Container>
     </Wrapper>
   )
 }
