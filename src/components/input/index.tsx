@@ -5,6 +5,7 @@ import { Inpt } from './styles'
 type InputType = {
   id?: string
   name?: string
+  value?: string
   placeholder?: string
   type: 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' |
         'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' |
@@ -12,8 +13,14 @@ type InputType = {
         'time' | 'url' | 'week'
 }
 
-export const Input = ({ id, name, type, placeholder }: InputType) => {
+export const Input = ({ id, name, type, value, placeholder }: InputType) => {
   return (
-    <Inpt id={id} name={name} type={type} placeholder={placeholder} />
+    <Inpt
+      id={id}
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      value={value}
+    />
   )
 }
