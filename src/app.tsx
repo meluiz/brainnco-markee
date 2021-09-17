@@ -13,7 +13,7 @@ export type FileType = {
   name: string
   content: string
   active: boolean
-  status: 'none' | 'editing' | 'saving' | 'saved'
+  status: 'editing' | 'saving' | 'saved'
 }
 
 export const App = () => {
