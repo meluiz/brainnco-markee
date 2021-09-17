@@ -6,8 +6,7 @@ type NavigationListItemType = {
 }
 
 export const Wrapper = styled.aside`${({ theme }) => css`
-  width: 332px;
-  height: 100%;
+  grid-area: Sidebar;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
