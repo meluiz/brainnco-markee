@@ -1,6 +1,7 @@
 
 /* ------| Componentes |------ */
-import { Input } from 'components/input'
+import { Input } from 'components/form/input'
+import { Textarea } from 'components/form/textarea'
 
 /* ------| Estilos |------ */
 import {
@@ -31,7 +32,9 @@ export const Content = () => {
         </Header>
         <MarkdownEditor>
           <Editor>
-            oláá
+            <Textarea resize='none'>
+              ## Bootcamp Brainn Co.
+            </Textarea>
           </Editor>
           <Preview>
             olá
