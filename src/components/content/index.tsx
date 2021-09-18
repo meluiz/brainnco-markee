@@ -22,7 +22,8 @@ type ContentType = {
   file?: FileType
   inputRef?: RefObject<HTMLInputElement>
   textareaRef: RefObject<HTMLTextAreaElement>
-  handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void
+  handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
+  handleUpdateContent: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
 }
 
 export const Content = ({ file, inputRef, textareaRef, handleUpdateFilename }: ContentType) => {
