@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { MouseEvent, ReactNode } from 'react'
 
 /* ------| Estilos |------ */
 import { Btn } from './styles'
@@ -8,7 +8,7 @@ type ButtonType = {
   children?: ReactNode
   type?: 'button' | 'submit' | 'reset'
   styleType: 'primary' | 'none'
-  onClick?: () => void
+  onClick?: (event?: MouseEvent<HTMLElement>) => void
 }
 
 export const Button = ({ children, type = 'button', styleType, onClick }: ButtonType) => {
