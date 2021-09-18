@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
 import { FileStats } from 'components/filestats'
@@ -26,9 +28,10 @@ import {
 import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
+  setFiles: Dispatch<SetStateAction<FileType[]>>
 }
 
-export const Sidebar = ({ files }: SidebarType) => {
+export const Sidebar = ({ files, setFiles }: SidebarType) => {
   return (
     <Wrapper>
       <Header>
