@@ -1,3 +1,6 @@
+import { Dispatch, SetStateAction } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
 import { FileStats } from 'components/filestats'
@@ -26,9 +29,25 @@ import {
 import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
+  setFiles: Dispatch<SetStateAction<FileType[]>>
 }
 
-export const Sidebar = ({ files }: SidebarType) => {
+export const Sidebar = ({ files, setFiles }: SidebarType) => {
+  const handleAddNewFile = () => {
+    setFiles((oldFiles) => (
+      oldFiles.map((file) => ({
+        ...file,
+        active: false,
+      })).concat({
+        id: uuidv4(),
+        name: 'Sem título',
+        content: '',
+        active: true,
+        status: 'saved',
+      })
+    ))
+  }
+
   return (
     <Wrapper>
       <Header>
@@ -43,7 +62,7 @@ export const Sidebar = ({ files }: SidebarType) => {
           <NavigationTitle>Arquivos</NavigationTitle>
         </NavigationHeader>
         <NavigationActions>
-          <Button styleType='primary'>
+          <Button styleType='primary' onClick={handleAddNewFile}>
             <NavigationButtonIcon>
               <svg width='14' height='14' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path
