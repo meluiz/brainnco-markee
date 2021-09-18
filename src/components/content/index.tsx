@@ -20,6 +20,7 @@ import {
 import { FileType } from 'app'
 type ContentType = {
   file?: FileType
+  inputRef: RefObject<HTMLInputElement>
   textareaRef: RefObject<HTMLTextAreaElement>
 }
 

@@ -16,14 +16,16 @@ type InputType = {
         'time' | 'url' | 'week'
 }
 
-export const Input = ({ id, name, type, value, placeholder }: InputType) => {
+export const Input = ({ id, name, type, value, reference, onChange, placeholder }: InputType) => {
   return (
     <Inpt
       id={id}
       name={name}
       type={type}
+      ref={reference}
       placeholder={placeholder}
       defaultValue={value}
+      onChange={onChange}
     />
   )
 }
