@@ -20,6 +20,21 @@ export const App = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const [files, setFiles] = useState<FileType[]>([])
 
+  const handleCreateFile = () => {
+    setFiles((oldFiles) => (
+      oldFiles.map((file) => ({
+        ...file,
+        active: false,
+      })).concat({
+        id: uuidv4(),
+        name: 'Sem título',
+        content: '',
+        active: true,
+        status: 'saved',
+      })
+    ))
+  }
+
   return (
     <Wrapper>
       <Container>
