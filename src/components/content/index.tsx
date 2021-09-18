@@ -23,7 +23,7 @@ type ContentType = {
   inputRef?: RefObject<HTMLInputElement>
   textareaRef: RefObject<HTMLTextAreaElement>
   handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
-  handleUpdateContent: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
+  handleUpdateContent: (id: string, event: ChangeEvent<HTMLTextAreaElement>) => void,
 }
 
 export const Content = ({
@@ -50,7 +50,14 @@ export const Content = ({
         </Header>
         <MarkdownEditor>
           <Editor>
-            <Textarea reference={textareaRef} resize='none' />
+            <Textarea
+              reference={textareaRef}
+              resize='none'
+              value={file?.content}
+              placeholder='Adicione algo ao arquivo'
+              onChange={(event) =>
+                event && file?.id && handleUpdateContent(file.id, event)}
+            />
           </Editor>
           <Preview>
             olá
