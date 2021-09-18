@@ -29,13 +29,15 @@ import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
   handleCreateFile: () => void,
-  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void
+  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void,
+  handleDeleteFile: (id: string, event: MouseEvent<HTMLElement>) => void
 }
 
 export const Sidebar = ({
   files,
   handleCreateFile,
   handleActiveFile,
+  handleDeleteFile,
 }: SidebarType) => {
   return (
     <Wrapper>
