@@ -1,4 +1,4 @@
-import { useState, useRef, MouseEvent } from 'react'
+import { useState, useRef, MouseEvent, useEffect, ChangeEvent } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 /* ------| Componentes |------ */
@@ -61,6 +61,20 @@ export const App = () => {
     )
   }
 
+  const handleUpdateFilename = (id: string, event: ChangeEvent<HTMLInputElement>) => {
+    setFiles((oldFiles) => oldFiles.map((file) => {
+      if (file.id === id) {
+        return {
+          ...file,
+          name: event.target.value,
+          status: 'editing',
+        }
+      }
+
+      return file
+    }))
+  }
+
   return (
     <Wrapper>
       <Container>
@@ -73,6 +87,7 @@ export const App = () => {
         <Content
           file={activeFile}
           textareaRef={textareaRef}
+          handleUpdateFilename={handleUpdateFilename}
         />
       </Container>
     </Wrapper>
