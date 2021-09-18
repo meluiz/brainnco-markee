@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, MouseEvent } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 /* ------| Componentes |------ */
@@ -47,7 +47,7 @@ export const App = () => {
   return (
     <Wrapper>
       <Container>
-        <Sidebar files={files} handleCreateFile={handleCreateFile} />
+        <Sidebar files={files} handleActiveFile={handleActiveFile} handleCreateFile={handleCreateFile} />
         <Content textareaRef={textareaRef} />
       </Container>
     </Wrapper>
