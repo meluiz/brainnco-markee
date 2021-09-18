@@ -117,6 +117,7 @@ export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, 
 
 export const NavigationListLink = styled.a`${({ theme }) => css`
   width: 100%;
+  min-height: 48px;
   border-radius: 4px;
   display: flex;
   align-items: center;
