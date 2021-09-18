@@ -24,7 +24,7 @@ type ContentType = {
   textareaRef: RefObject<HTMLTextAreaElement>
 }
 
-export const Content = ({ textareaRef }: ContentType) => {
+export const Content = ({ file, inputRef, textareaRef }: ContentType) => {
   return (
     <Wrapper>
       <Container>
