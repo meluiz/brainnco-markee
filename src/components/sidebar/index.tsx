@@ -29,25 +29,13 @@ import {
 import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
-  setFiles: Dispatch<SetStateAction<FileType[]>>
+  handleCreateFile: () => void
 }
 
-export const Sidebar = ({ files, setFiles }: SidebarType) => {
-  const handleAddNewFile = () => {
-    setFiles((oldFiles) => (
-      oldFiles.map((file) => ({
-        ...file,
-        active: false,
-      })).concat({
-        id: uuidv4(),
-        name: 'Sem título',
-        content: '',
-        active: true,
-        status: 'saved',
-      })
-    ))
-  }
-
+export const Sidebar = ({
+  files,
+  handleCreateFile,
+}: SidebarType) => {
   return (
     <Wrapper>
       <Header>
