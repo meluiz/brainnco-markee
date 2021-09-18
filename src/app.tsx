@@ -38,7 +38,7 @@ export const App = () => {
   return (
     <Wrapper>
       <Container>
-        <Sidebar files={files} setFiles={setFiles} />
+        <Sidebar files={files} handleCreateFile={handleCreateFile} />
         <Content textareaRef={textareaRef} />
       </Container>
     </Wrapper>
