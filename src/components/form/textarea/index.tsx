@@ -24,7 +24,7 @@ export const Textarea = ({
       ref={reference}
       resize={resize}
       placeholder={placeholder}
-      defaultValue={value}
+      value={value || ''}
       onChange={onChange}
     />
   )
