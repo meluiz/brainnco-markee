@@ -10,7 +10,11 @@ type TextareaType = {
   resize?: 'none' | 'both' | 'horizontal' | 'vertical' | 'block' | 'inline'
 }
 
-export const Textarea = ({ resize, reference, onChange }: TextareaType) => {
+export const Textarea = ({
+  resize,
+  reference,
+  onChange,
+}: TextareaType) => {
   return (
     <Area
       ref={reference}
