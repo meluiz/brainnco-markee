@@ -77,6 +77,20 @@ export const App = () => {
     }))
   }
 
+  const handleUpdateContent = (id: string, event: ChangeEvent<HTMLTextAreaElement>) => {
+    setFiles((oldFiles) => oldFiles.map((file) => {
+      if (file.id === id) {
+        return {
+          ...file,
+          content: event.target.value,
+          status: 'editing',
+        }
+      }
+
+      return file
+    }))
+  }
+
   return (
     <Wrapper>
       <Container>
@@ -90,6 +104,7 @@ export const App = () => {
           file={activeFile}
           textareaRef={textareaRef}
           handleUpdateFilename={handleUpdateFilename}
+          handleUpdateContent={handleUpdateContent}
         />
       </Container>
     </Wrapper>
