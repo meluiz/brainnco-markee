@@ -38,6 +38,8 @@ export const App = () => {
 
   const handleActiveFile = (id: string, event: MouseEvent<HTMLElement>) => {
     event.preventDefault()
+    textareaRef.current?.focus()
+
     setFiles((oldFiles) => oldFiles.map((file) => ({
       ...file,
       active: file.id === id,
