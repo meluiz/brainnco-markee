@@ -19,7 +19,14 @@ export type FileType = {
 
 export const App = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
+
   const [files, setFiles] = useState<FileType[]>([])
+  const [activeFile, setActiveFile] = useState<FileType>()
+
+  useEffect(() => {
+    const actived = files.filter(file => file.active === true)
+    setActiveFile(actived[0])
+  }, [files])
 
   const handleCreateFile = () => {
     setFiles((oldFiles) => (
