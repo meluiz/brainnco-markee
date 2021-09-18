@@ -1,4 +1,4 @@
-import { RefObject, useState } from 'react'
+import { ChangeEvent, RefObject } from 'react'
 
 /* ------| Componentes |------ */
 import { Input } from 'components/form/input'
@@ -25,7 +25,7 @@ type ContentType = {
   handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export const Content = ({ file, inputRef, textareaRef }: ContentType) => {
+export const Content = ({ file, inputRef, textareaRef, handleUpdateFilename }: ContentType) => {
   return (
     <Wrapper>
       <Container>
@@ -37,6 +37,8 @@ export const Content = ({ file, inputRef, textareaRef }: ContentType) => {
             type='text'
             reference={inputRef}
             value={file?.name}
+            onChange={(event) =>
+              event && file?.id && handleUpdateFilename(file.id, event)}
           />
         </Header>
         <MarkdownEditor>
