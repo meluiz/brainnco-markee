@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react'
+
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
 import { FileStats } from 'components/filestats'
@@ -26,7 +28,8 @@ import {
 import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
-  handleCreateFile: () => void
+  handleCreateFile: () => void,
+  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void
 }
 
 export const Sidebar = ({
