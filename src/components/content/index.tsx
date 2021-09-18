@@ -17,7 +17,9 @@ import {
 } from './styles'
 
 /* ------| Tipagem |------ */
+import { FileType } from 'app'
 type ContentType = {
+  file?: FileType
   textareaRef: RefObject<HTMLTextAreaElement>
 }
 
