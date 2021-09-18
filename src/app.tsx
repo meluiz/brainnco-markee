@@ -36,6 +36,14 @@ export const App = () => {
     ))
   }
 
+  const handleActiveFile = (id: string, event: MouseEvent<HTMLElement>) => {
+    event.preventDefault()
+    setFiles((oldFiles) => oldFiles.map((file) => ({
+      ...file,
+      active: file.id === id,
+    })))
+  }
+
   return (
     <Wrapper>
       <Container>
