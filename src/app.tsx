@@ -26,6 +26,8 @@ export const App = () => {
   useEffect(() => {
     const actived = files.filter(file => file.active === true)
     setActiveFile(actived[0])
+
+    if (files.length === 0) handleCreateFile()
   }, [files])
 
   const handleCreateFile = () => {
