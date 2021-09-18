@@ -63,7 +63,7 @@ export const App = () => {
           handleCreateFile={handleCreateFile}
           handleDeleteFile={handleDeleteFile}
         />
-        <Content textareaRef={textareaRef} />
+        <Content file={activeFile} textareaRef={textareaRef} />
       </Container>
     </Wrapper>
   )
