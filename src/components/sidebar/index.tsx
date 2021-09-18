@@ -32,6 +32,7 @@ type SidebarType = {
 export const Sidebar = ({
   files,
   handleCreateFile,
+  handleActiveFile,
 }: SidebarType) => {
   return (
     <Wrapper>
@@ -66,7 +67,10 @@ export const Sidebar = ({
         <NavigationList>
           {files && files.map((file) => (
             <NavigationListItem key={file.id} active={file.active}>
-              <NavigationListLink href='/#'>
+              <NavigationListLink
+                href='/#'
+                onClick={(event) => handleActiveFile(file.id, event)}
+              >
                 <NavigationListLinkFilename>
                   <div className='icon'>
                     <FileIcon />
