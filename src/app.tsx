@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 /* ------| Componentes |------ */
 import { Content } from 'components/content'
@@ -18,15 +18,8 @@ export type FileType = {
 
 export const App = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
-  const [files, setFiles] = useState<FileType[]>([
-    {
-      id: '11d6b24b-a886-43e1-8b8f-bfd6d035ea96',
-      name: 'None.md',
-      content: '',
-      active: true,
-      status: 'saved',
-    },
-  ])
+  const [files, setFiles] = useState<FileType[]>([])
+
   return (
     <Wrapper>
       <Container>
