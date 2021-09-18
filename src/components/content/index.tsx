@@ -1,5 +1,6 @@
 import { ChangeEvent, RefObject } from 'react'
 import marked from 'marked'
+import 'highlight.js/styles/github.css'
 
 /* ------| Componentes |------ */
 import { Input } from 'components/form/input'
