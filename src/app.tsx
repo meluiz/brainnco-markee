@@ -24,7 +24,7 @@ export const App = () => {
     <Wrapper>
       <Container>
         <Sidebar files={files} setFiles={setFiles} />
-        <Content />
+        <Content textareaRef={textareaRef} />
       </Container>
     </Wrapper>
   )

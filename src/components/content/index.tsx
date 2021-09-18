@@ -1,3 +1,4 @@
+import { RefObject } from 'react'
 
 /* ------| Componentes |------ */
 import { Input } from 'components/form/input'
@@ -15,7 +16,12 @@ import {
   Wrapper,
 } from './styles'
 
-export const Content = () => {
+/* ------| Tipagem |------ */
+type ContentType = {
+  textareaRef: RefObject<HTMLTextAreaElement>
+}
+
+export const Content = ({ textareaRef }: ContentType) => {
   return (
     <Wrapper>
       <Container>
@@ -27,7 +33,7 @@ export const Content = () => {
         </Header>
         <MarkdownEditor>
           <Editor>
-            <Textarea resize='none' />
+            <Textarea reference={textareaRef} resize='none' />
           </Editor>
           <Preview>
             olá
