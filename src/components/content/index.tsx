@@ -26,7 +26,13 @@ type ContentType = {
   handleUpdateContent: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
 }
 
-export const Content = ({ file, inputRef, textareaRef, handleUpdateFilename }: ContentType) => {
+export const Content = ({
+  file,
+  inputRef,
+  textareaRef,
+  handleUpdateFilename,
+  handleUpdateContent,
+}: ContentType) => {
   return (
     <Wrapper>
       <Container>
