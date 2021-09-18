@@ -13,6 +13,8 @@ type TextareaType = {
 }
 
 export const Textarea = ({
+  value,
+  placeholder,
   resize,
   reference,
   onChange,
@@ -21,7 +23,8 @@ export const Textarea = ({
     <Area
       ref={reference}
       resize={resize}
-      defaultValue='## Bootcamp Brainn Co.'
+      placeholder={placeholder}
+      defaultValue={value}
       onChange={onChange}
     />
   )
