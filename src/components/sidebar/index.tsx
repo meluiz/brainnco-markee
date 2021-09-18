@@ -50,7 +50,7 @@ export const Sidebar = ({
           <NavigationTitle>Arquivos</NavigationTitle>
         </NavigationHeader>
         <NavigationActions>
-          <Button styleType='primary' onClick={handleAddNewFile}>
+          <Button styleType='primary' onClick={handleCreateFile}>
             <NavigationButtonIcon>
               <svg width='14' height='14' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path
