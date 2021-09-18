@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from 'react'
-
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
 import { FileStats } from 'components/filestats'
