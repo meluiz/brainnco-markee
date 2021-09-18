@@ -29,7 +29,10 @@ export const Content = ({ textareaRef }: ContentType) => {
           <HeaderIcon>
             <FileIcon size={28} />
           </HeaderIcon>
-          <Input type='text' value='README.md' />
+          <Input
+            type='text'
+            value='README.md'
+          />
         </Header>
         <MarkdownEditor>
           <Editor>
