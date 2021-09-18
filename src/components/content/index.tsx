@@ -33,7 +33,8 @@ export const Content = ({ textareaRef }: ContentType) => {
           </HeaderIcon>
           <Input
             type='text'
-            value='README.md'
+            reference={inputRef}
+            value={file?.name}
           />
         </Header>
         <MarkdownEditor>
