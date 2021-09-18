@@ -47,7 +47,11 @@ export const App = () => {
   return (
     <Wrapper>
       <Container>
-        <Sidebar files={files} handleActiveFile={handleActiveFile} handleCreateFile={handleCreateFile} />
+        <Sidebar
+          files={files}
+          handleActiveFile={handleActiveFile}
+          handleCreateFile={handleCreateFile}
+        />
         <Content textareaRef={textareaRef} />
       </Container>
     </Wrapper>
