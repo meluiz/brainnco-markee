@@ -46,6 +46,14 @@ export const App = () => {
     })))
   }
 
+  const handleDeleteFile = (id: string, event: MouseEvent<HTMLElement>) => {
+    event.stopPropagation()
+
+    setFiles((oldFiles) =>
+      oldFiles.filter(file => file.id !== id),
+    )
+  }
+
   return (
     <Wrapper>
       <Container>
@@ -53,6 +61,7 @@ export const App = () => {
           files={files}
           handleActiveFile={handleActiveFile}
           handleCreateFile={handleCreateFile}
+          handleDeleteFile={handleDeleteFile}
         />
         <Content textareaRef={textareaRef} />
       </Container>
