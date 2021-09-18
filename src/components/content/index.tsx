@@ -1,4 +1,4 @@
-import { RefObject } from 'react'
+import { RefObject, useState } from 'react'
 
 /* ------| Componentes |------ */
 import { Input } from 'components/form/input'
