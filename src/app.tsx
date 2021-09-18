@@ -17,6 +17,7 @@ export type FileType = {
 }
 
 export const App = () => {
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
   const [files, setFiles] = useState<FileType[]>([
     {
       id: '11d6b24b-a886-43e1-8b8f-bfd6d035ea96',
