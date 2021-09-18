@@ -28,6 +28,21 @@ type ContentType = {
   handleUpdateContent: (id: string, event: ChangeEvent<HTMLTextAreaElement>) => void,
 }
 
+/* ------| Importações Assíncronos |------ */
+import('highlight.js').then((highlight) => {
+  const hl = highlight.default
+
+  marked.setOptions({
+    highlight: (code, language) => {
+      if (language && hl.getLanguage(language)) {
+        return hl.highlight(code, { language }).value
+      }
+
+      return hl.highlightAuto(code).value
+    },
+  })
+})
+
 export const Content = ({
   file,
   inputRef,
