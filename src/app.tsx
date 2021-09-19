@@ -21,7 +21,6 @@ export const App = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const [files, setFiles] = useState<FileType[]>([])
-  const [activeFile, setActiveFile] = useState<FileType>()
 
   useEffect(() => {
     const activeFile = files.find(file => file.active === true)
@@ -131,7 +130,7 @@ export const App = () => {
           handleDeleteFile={handleDeleteFile}
         />
         <Content
-          file={activeFile}
+          file={files.find(file => file.active === true)}
           textareaRef={textareaRef}
           handleUpdateFilename={handleUpdateFilename}
           handleUpdateContent={handleUpdateContent}
