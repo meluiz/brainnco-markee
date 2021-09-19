@@ -14,7 +14,6 @@ export const useFiles = () => {
   useEffect(() => {
     const activeFile = files.find(file => file.active === true)
 
-    if (files.length === 0) handleCreateFile()
     if (!activeFile || activeFile?.status !== 'editing') return
 
     let timing: ReturnType<typeof setTimeout>
