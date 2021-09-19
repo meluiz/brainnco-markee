@@ -48,6 +48,17 @@ export const useFiles = () => {
   }, [files])
 
   useEffect(() => {
+    const Storage = async (name: string) => {
+      const files = await localForage.getItem<FileType[]>(name)
+
+      if (files) return setFiles(files)
+      return handleCreateFile()
+    }
+
+    Storage('md-files')
+  }, [])
+
+  useEffect(() => {
     const activeFile = files.find(file => file.active === true)
 
     if (!activeFile || activeFile?.status !== 'saved') return
