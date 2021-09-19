@@ -28,6 +28,36 @@ export const App = () => {
     setActiveFile(actived)
 
     if (files.length === 0) handleCreateFile()
+
+    let timing: ReturnType<typeof setTimeout>
+    const handleStatus = () => {
+      timing = setTimeout(() => {
+        setFiles((oldFiles) => oldFiles.map((file) => {
+          if (file.active) {
+            return {
+              ...file,
+              status: 'saving',
+            }
+          }
+          return file
+        }))
+
+        setTimeout(() => {
+          setFiles((oldFiles) => oldFiles.map((file) => {
+            if (file.active) {
+              return {
+                ...file,
+                status: 'saved',
+              }
+            }
+            return file
+          }))
+        }, 600)
+      }, 600)
+    }
+
+    handleStatus()
+    return () => clearTimeout(timing)
   }, [files])
 
   const handleCreateFile = () => {
