@@ -78,7 +78,9 @@ export const Content = ({
                 event && file?.id && handleUpdateContent(file.id, event)}
             />
           </Editor>
-          <Preview dangerouslySetInnerHTML={{ __html: marked(file?.content || '') }} />
+          <Preview
+            dangerouslySetInnerHTML={{ __html: marked(file?.content || '') }}
+          />
         </MarkdownEditor>
       </Container>
     </Wrapper>

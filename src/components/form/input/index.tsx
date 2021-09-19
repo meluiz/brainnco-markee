@@ -17,7 +17,16 @@ type InputType = {
         'time' | 'url' | 'week'
 }
 
-export const Input = ({ id, name, type, value, reference, onChange, placeholder, autoFocus }: InputType) => {
+export const Input = ({
+  id,
+  name,
+  type,
+  value,
+  reference,
+  onChange,
+  placeholder,
+  autoFocus,
+}: InputType) => {
   return (
     <Inpt
       id={id}

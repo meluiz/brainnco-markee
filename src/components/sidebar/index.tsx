@@ -44,7 +44,10 @@ export const Sidebar = ({
       <Header>
         <LogoLink href='/'>
           <Logo>
-            <img src='/img/static/logo-full.svg' alt='Markee Logo' />
+            <img
+              src='/img/static/logo-full.svg'
+              alt='Markee Logo'
+            />
           </Logo>
         </LogoLink>
       </Header>
@@ -55,14 +58,26 @@ export const Sidebar = ({
         <NavigationActions>
           <Button styleType='primary' onClick={handleCreateFile}>
             <NavigationButtonIcon>
-              <svg width='14' height='14' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <svg
+                width='14'
+                height='14'
+                viewBox='0 0 12 12'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
                 <path
-                  d='M5.66663 1V10.3333' stroke='currentColor' strokeWidth='1.5'
-                  strokeLinecap='round' strokeLinejoin='round'
+                  d='M5.66663 1V10.3333'
+                  stroke='currentColor'
+                  strokeWidth='1.5'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
                 <path
-                  d='M1 5.66669H10.3333' stroke='currentColor' strokeWidth='1.5'
-                  strokeLinecap='round' strokeLinejoin='round'
+                  d='M1 5.66669H10.3333'
+                  stroke='currentColor'
+                  strokeWidth='1.5'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
               </svg>
             </NavigationButtonIcon>
