@@ -27,7 +27,7 @@ export const App = () => {
     const activeFile = files.find(file => file.active === true)
 
     if (files.length === 0) handleCreateFile()
-    if (!actived || actived.status !== 'editing') return
+    if (!activeFile || activeFile?.status !== 'editing') return
 
     let timing: ReturnType<typeof setTimeout>
     const handleStatus = () => {
