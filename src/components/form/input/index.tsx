@@ -8,6 +8,7 @@ type InputType = {
   name?: string
   value?: string
   placeholder?: string
+  autoFocus?: boolean
   onChange?: (event?: ChangeEvent<HTMLInputElement>) => void
   reference?: RefObject<HTMLInputElement>
   type: 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' |
@@ -16,7 +17,7 @@ type InputType = {
         'time' | 'url' | 'week'
 }
 
-export const Input = ({ id, name, type, value, reference, onChange, placeholder }: InputType) => {
+export const Input = ({ id, name, type, value, reference, onChange, placeholder, autoFocus }: InputType) => {
   return (
     <Inpt
       id={id}
@@ -26,6 +27,7 @@ export const Input = ({ id, name, type, value, reference, onChange, placeholder 
       placeholder={placeholder}
       value={`${value}`}
       onChange={onChange}
+      autoFocus={autoFocus}
     />
   )
 }
