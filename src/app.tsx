@@ -1,5 +1,6 @@
 /* ------| Componentes |------ */
 import { Content } from 'components/content'
+import { EmptyContent } from 'components/empty'
 import { Sidebar } from 'components/sidebar'
 import { useFiles } from 'hooks/files'
 
@@ -36,13 +37,15 @@ export const App = () => {
           handleCreateFile={handleCreateFile}
           handleDeleteFile={handleDeleteFile}
         />
-        <Content
-          file={files.find(file => file.active === true)}
-          inputRef={inputRef}
-          textareaRef={textareaRef}
-          handleUpdateFilename={handleUpdateFilename}
-          handleUpdateContent={handleUpdateContent}
-        />
+        {files.length > 0
+          ? <Content
+              file={files.find(file => file.active === true)}
+              inputRef={inputRef}
+              textareaRef={textareaRef}
+              handleUpdateFilename={handleUpdateFilename}
+              handleUpdateContent={handleUpdateContent}
+            />
+          : <EmptyContent />}
       </Container>
     </Wrapper>
   )
