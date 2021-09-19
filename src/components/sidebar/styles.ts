@@ -104,6 +104,14 @@ export const NavigationList = styled.ul`
   gap: 8px;
   overflow-x: hidden;
   overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #293445 #1e293b;
+
+  ::-webkit-scrollbar { width: 10px }
+  ::-webkit-scrollbar-track { background: #1e293b }
+  ::-webkit-scrollbar-thumb { background: #293445 }
+  ::-webkit-scrollbar-thumb:hover { background: #293445 }
 `
 
 export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, active }) => css`
