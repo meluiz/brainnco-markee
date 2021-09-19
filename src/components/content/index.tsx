@@ -61,6 +61,7 @@ export const Content = ({
             type='text'
             reference={inputRef}
             value={file?.name}
+            placeholder='Nomeie seu arquivo....'
             onChange={(event) =>
               event && file?.id && handleUpdateFilename(file.id, event)}
           />
