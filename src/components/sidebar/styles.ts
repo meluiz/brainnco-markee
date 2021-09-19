@@ -20,6 +20,7 @@ export const Header = styled.header`
   min-height: 0;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   justify-content: center;
   padding: 36px;
 `
@@ -53,6 +54,7 @@ export const NavigationHeader = styled.div`${({ theme }) => css`
   height: 24px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   padding: 0 14px;
   position: relative;
 
@@ -77,6 +79,7 @@ export const NavigationTitle = styled.div`${({ theme }) => css`
 
 export const NavigationActions = styled.div`
   min-height: 0;
+  flex-shrink: 0;
   padding: 24px 0;
   position: relative;
 
@@ -99,6 +102,7 @@ export const NavigationList = styled.ul`
   flex-direction: column;
   list-style: none;
   gap: 8px;
+  overflow: auto;
 `
 
 export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, active }) => css`
