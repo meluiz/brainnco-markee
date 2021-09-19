@@ -11,7 +11,12 @@ type ButtonType = {
   onClick?: (event?: MouseEvent<HTMLElement>) => void
 }
 
-export const Button = ({ children, type = 'button', styleType, onClick }: ButtonType) => {
+export const Button = ({
+  children,
+  type = 'button',
+  styleType,
+  onClick,
+}: ButtonType) => {
   return (
     <Btn styleType={styleType} type={type} onClick={onClick}>
       {children}

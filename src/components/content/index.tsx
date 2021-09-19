@@ -23,7 +23,7 @@ import { FileType } from 'app'
 type ContentType = {
   file?: FileType
   inputRef?: RefObject<HTMLInputElement>
-  textareaRef: RefObject<HTMLTextAreaElement>
+  textareaRef?: RefObject<HTMLTextAreaElement>
   handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
   handleUpdateContent: (id: string, event: ChangeEvent<HTMLTextAreaElement>) => void,
 }
@@ -62,6 +62,7 @@ export const Content = ({
             reference={inputRef}
             value={file?.name}
             placeholder='Nomeie seu arquivo....'
+            autoFocus
             onChange={(event) =>
               event && file?.id && handleUpdateFilename(file.id, event)}
           />
@@ -77,7 +78,9 @@ export const Content = ({
                 event && file?.id && handleUpdateContent(file.id, event)}
             />
           </Editor>
-          <Preview dangerouslySetInnerHTML={{ __html: marked(file?.content || '') }} />
+          <Preview
+            dangerouslySetInnerHTML={{ __html: marked(file?.content || '') }}
+          />
         </MarkdownEditor>
       </Container>
     </Wrapper>
