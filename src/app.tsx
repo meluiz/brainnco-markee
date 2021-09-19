@@ -24,8 +24,7 @@ export const App = () => {
   const [activeFile, setActiveFile] = useState<FileType>()
 
   useEffect(() => {
-    const actived = files.find(file => file.active === true)
-    setActiveFile(actived)
+    const activeFile = files.find(file => file.active === true)
 
     if (files.length === 0) handleCreateFile()
     if (!actived || actived.status !== 'editing') return
