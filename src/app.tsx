@@ -1,9 +1,7 @@
-import { useState, useRef, MouseEvent, useEffect, ChangeEvent } from 'react'
-import { v4 as uuidv4 } from 'uuid'
-
 /* ------| Componentes |------ */
 import { Content } from 'components/content'
 import { Sidebar } from 'components/sidebar'
+import { useFiles } from 'hooks/files'
 
 /* ------| Estilos |------ */
 import { Container, Wrapper } from 'styles/layout'
@@ -18,117 +16,16 @@ export type FileType = {
 }
 
 export const App = () => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null)
-
-  const [files, setFiles] = useState<FileType[]>([])
-
-  useEffect(() => {
-    const activeFile = files.find(file => file.active === true)
-
-    if (files.length === 0) handleCreateFile()
-    if (!activeFile || activeFile?.status !== 'editing') return
-
-    let timing: ReturnType<typeof setTimeout>
-    const handleStatus = () => {
-      timing = setTimeout(() => {
-        setFiles((oldFiles) => oldFiles.map((file) => {
-          if (file.active) {
-            return {
-              ...file,
-              status: 'saving',
-            }
-          }
-          return file
-        }))
-
-        setTimeout(() => {
-          setFiles((oldFiles) => oldFiles.map((file) => {
-            if (file.active) {
-              return {
-                ...file,
-                status: 'saved',
-              }
-            }
-            return file
-          }))
-        }, 600)
-      }, 600)
-    }
-
-    handleStatus()
-    return () => clearTimeout(timing)
-  }, [files])
-
-  const handleCreateFile = () => {
-    setFiles((oldFiles) => (
-      oldFiles.map((file) => ({
-        ...file,
-        active: false,
-      })).concat({
-        id: uuidv4(),
-        name: 'Sem título',
-        content: '',
-        active: true,
-        status: 'saved',
-      })
-    ))
-  }
-
-  const handleActiveFile = (id: string, event: MouseEvent<HTMLElement>) => {
-    event.preventDefault()
-    textareaRef.current?.focus()
-
-    setFiles((oldFiles) => oldFiles.map((file) => ({
-      ...file,
-      active: file.id === id,
-    })))
-  }
-
-  const handleDeleteFile = (id: string, event: MouseEvent<HTMLElement>) => {
-    event.stopPropagation()
-    const activeFile = files.find(file => file.active === true)
-
-    setFiles((oldFiles) =>
-      oldFiles.filter(file => file.id !== id)
-        .map((file, index) => {
-          if (index === 0 && activeFile?.id === id) {
-            return {
-              ...file,
-              active: true,
-            }
-          }
-          return file
-        }),
-    )
-  }
-
-  const handleUpdateFilename = (id: string, event: ChangeEvent<HTMLInputElement>) => {
-    setFiles((oldFiles) => oldFiles.map((file) => {
-      if (file.id === id) {
-        return {
-          ...file,
-          name: event.target.value,
-          status: 'editing',
-        }
-      }
-
-      return file
-    }))
-  }
-
-  const handleUpdateContent = (id: string, event: ChangeEvent<HTMLTextAreaElement>) => {
-    setFiles((oldFiles) => oldFiles.map((file) => {
-      if (file.id === id) {
-        return {
-          ...file,
-          content: event.target.value,
-          status: 'editing',
-        }
-      }
-
-      return file
-    }))
-  }
+  const {
+    inputRef,
+    textareaRef,
+    files,
+    handleActiveFile,
+    handleCreateFile,
+    handleDeleteFile,
+    handleUpdateContent,
+    handleUpdateFilename,
+  } = useFiles()
 
   return (
     <Wrapper>
