@@ -86,9 +86,19 @@ export const App = () => {
 
   const handleDeleteFile = (id: string, event: MouseEvent<HTMLElement>) => {
     event.stopPropagation()
+    const activeFile = files.find(file => file.active === true)
 
     setFiles((oldFiles) =>
-      oldFiles.filter(file => file.id !== id),
+      oldFiles.filter(file => file.id !== id)
+        .map((file, index) => {
+          if (index === 0 && activeFile?.id === id) {
+            return {
+              ...file,
+              active: true,
+            }
+          }
+          return file
+        }),
     )
   }
 
