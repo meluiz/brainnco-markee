@@ -72,7 +72,7 @@ export const Content = ({
               reference={textareaRef}
               resize='none'
               value={file?.content}
-              placeholder='Adicione algo ao arquivo'
+              placeholder='Era uma vez...'
               onChange={(event) =>
                 event && file?.id && handleUpdateContent(file.id, event)}
             />
