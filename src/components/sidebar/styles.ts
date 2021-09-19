@@ -102,7 +102,8 @@ export const NavigationList = styled.ul`
   flex-direction: column;
   list-style: none;
   gap: 8px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 `
 
 export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, active }) => css`
