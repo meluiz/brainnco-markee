@@ -92,8 +92,8 @@ export const Sidebar = ({
                       <path d='M1.5 0.880615L9.18 8.56061M9.5 0.880615L1.82 8.56061' stroke='white' strokeWidth='1.5' strokeLinecap='round' />
                     </svg>
                   </Button>
-                    <FileStats stats={file.status} />
-                  </NavigationListLinkStats>
+                  {file.active && <FileStats stats={file.status} />}
+                </NavigationListLinkStats>
                 )}
               </NavigationListLink>
             </NavigationListItem>
