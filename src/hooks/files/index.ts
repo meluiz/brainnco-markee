@@ -47,6 +47,18 @@ export const useFiles = () => {
     return () => clearTimeout(timing)
   }, [files])
 
+  useEffect(() => {
+    const activeFile = files.find(file => file.active === true)
+
+    if (!activeFile || activeFile?.status !== 'saved') return
+
+    const Storage =
+      async (name: string, value: FileType[]) =>
+        await localForage.setItem(name, value)
+
+    Storage('md-files', files)
+  }, [files])
+
   const handleCreateFile = () => {
     inputRef.current?.focus()
 
