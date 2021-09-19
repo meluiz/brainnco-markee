@@ -24,7 +24,7 @@ export const Input = ({ id, name, type, value, reference, onChange, placeholder 
       type={type}
       ref={reference}
       placeholder={placeholder}
-      value={value || ''}
+      value={`${value}`}
       onChange={onChange}
     />
   )
