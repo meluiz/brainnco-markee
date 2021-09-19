@@ -64,8 +64,7 @@ export const useFiles = () => {
   const handleActiveFile = (id: string, event: MouseEvent<HTMLElement>) => {
     event.preventDefault()
 
-    // TODO: Foco no input
-    textareaRef.current?.focus()
+    inputRef.current?.focus()
 
     setFiles((oldFiles) => oldFiles.map((file) => ({
       ...file,
