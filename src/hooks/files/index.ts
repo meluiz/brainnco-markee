@@ -1,5 +1,6 @@
 import { ChangeEvent, MouseEvent, useEffect, useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import localForage from 'localforage'
 
 /* ------| Tipagem |------ */
 import { FileType } from 'app'
