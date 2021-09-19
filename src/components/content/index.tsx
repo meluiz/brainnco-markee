@@ -23,7 +23,7 @@ import { FileType } from 'app'
 type ContentType = {
   file?: FileType
   inputRef?: RefObject<HTMLInputElement>
-  textareaRef: RefObject<HTMLTextAreaElement>
+  textareaRef?: RefObject<HTMLTextAreaElement>
   handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
   handleUpdateContent: (id: string, event: ChangeEvent<HTMLTextAreaElement>) => void,
 }
