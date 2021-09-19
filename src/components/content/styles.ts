@@ -67,6 +67,7 @@ export const Editor = styled.div`
 `
 
 export const Preview = styled.div`
+  word-break: break-all;
   padding-left: 12px;
   grid-area: Preview;
   line-height: 1.5;
