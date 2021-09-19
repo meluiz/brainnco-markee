@@ -13,6 +13,7 @@ export const Wrapper = styled.aside`${({ theme }) => css`
   flex-grow: 0;
   position: relative;
   background-color: ${theme.colors.black};
+  overflow: hidden;
 `}`
 
 export const Header = styled.header`
@@ -44,6 +45,7 @@ export const Navigation = styled.nav`
   padding: 8px 32px;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 `
 
 export const NavigationHeader = styled.div`${({ theme }) => css`
