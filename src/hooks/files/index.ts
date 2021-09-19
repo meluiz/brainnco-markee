@@ -48,6 +48,15 @@ export const useFiles = () => {
   }, [files])
 
   useEffect(() => {
+    const activeFile = files.find(file => file.active === true)
+    const historyFile =
+      (id: String) =>
+        window.history.pushState(null, '', `/file/${id}`)
+
+    if (activeFile) historyFile(`${activeFile.id}`)
+  }, [files])
+
+  useEffect(() => {
     const Storage = async (name: string) => {
       const files = await localForage.getItem<FileType[]>(name)
 
