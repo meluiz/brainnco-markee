@@ -47,6 +47,8 @@ export const useFiles = () => {
   }, [files])
 
   const handleCreateFile = () => {
+    inputRef.current?.focus()
+
     setFiles((oldFiles) => (
       oldFiles.map((file) => ({
         ...file,
