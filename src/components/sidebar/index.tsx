@@ -82,7 +82,6 @@ export const Sidebar = ({
                   </div>
                   <span className='text'>{file.name}</span>
                 </NavigationListLinkFilename>
-                {file.active && (
                 <NavigationListLinkStats>
                   <Button
                     styleType='none'
@@ -94,7 +93,6 @@ export const Sidebar = ({
                   </Button>
                   {file.active && <FileStats stats={file.status} />}
                 </NavigationListLinkStats>
-                )}
               </NavigationListLink>
             </NavigationListItem>
           ))}
