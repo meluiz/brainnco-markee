@@ -38,6 +38,7 @@ export const App = () => {
         />
         <Content
           file={files.find(file => file.active === true)}
+          inputRef={inputRef}
           textareaRef={textareaRef}
           handleUpdateFilename={handleUpdateFilename}
           handleUpdateContent={handleUpdateContent}
