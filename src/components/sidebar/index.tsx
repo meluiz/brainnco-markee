@@ -83,15 +83,15 @@ export const Sidebar = ({
                   <span className='text'>{file.name}</span>
                 </NavigationListLinkFilename>
                 {file.active && (
-                  <NavigationListLinkStats>
-                    <Button
-                      styleType='none'
-                      onClick={(event) => event && handleDeleteFile(file.id, event)}
-                    >
-                      <svg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M1.5 0.880615L9.18 8.56061M9.5 0.880615L1.82 8.56061' stroke='white' strokeWidth='1.5' strokeLinecap='round' />
-                      </svg>
-                    </Button>
+                <NavigationListLinkStats>
+                  <Button
+                    styleType='none'
+                    onClick={(event) => event && handleDeleteFile(file.id, event)}
+                  >
+                    <svg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                      <path d='M1.5 0.880615L9.18 8.56061M9.5 0.880615L1.82 8.56061' stroke='white' strokeWidth='1.5' strokeLinecap='round' />
+                    </svg>
+                  </Button>
                     <FileStats stats={file.status} />
                   </NavigationListLinkStats>
                 )}
