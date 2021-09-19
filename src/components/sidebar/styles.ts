@@ -13,12 +13,14 @@ export const Wrapper = styled.aside`${({ theme }) => css`
   flex-grow: 0;
   position: relative;
   background-color: ${theme.colors.black};
+  overflow: hidden;
 `}`
 
 export const Header = styled.header`
   min-height: 0;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   justify-content: center;
   padding: 36px;
 `
@@ -44,6 +46,7 @@ export const Navigation = styled.nav`
   padding: 8px 32px;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 `
 
 export const NavigationHeader = styled.div`${({ theme }) => css`
@@ -51,6 +54,7 @@ export const NavigationHeader = styled.div`${({ theme }) => css`
   height: 24px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   padding: 0 14px;
   position: relative;
 
@@ -75,6 +79,7 @@ export const NavigationTitle = styled.div`${({ theme }) => css`
 
 export const NavigationActions = styled.div`
   min-height: 0;
+  flex-shrink: 0;
   padding: 24px 0;
   position: relative;
 
@@ -97,6 +102,16 @@ export const NavigationList = styled.ul`
   flex-direction: column;
   list-style: none;
   gap: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #293445 #1e293b;
+
+  ::-webkit-scrollbar { width: 10px }
+  ::-webkit-scrollbar-track { background: #1e293b }
+  ::-webkit-scrollbar-thumb { background: #293445 }
+  ::-webkit-scrollbar-thumb:hover { background: #293445 }
 `
 
 export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, active }) => css`
@@ -117,6 +132,7 @@ export const NavigationListItem = styled.li<NavigationListItemType>`${({ theme, 
 
 export const NavigationListLink = styled.a`${({ theme }) => css`
   width: 100%;
+  min-height: 48px;
   border-radius: 4px;
   display: flex;
   align-items: center;
