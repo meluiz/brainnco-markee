@@ -62,6 +62,7 @@ export const Content = ({
             reference={inputRef}
             value={file?.name}
             placeholder='Nomeie seu arquivo....'
+            autoFocus
             onChange={(event) =>
               event && file?.id && handleUpdateFilename(file.id, event)}
           />
