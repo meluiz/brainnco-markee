@@ -41,7 +41,7 @@ export const Sidebar = ({
   handleDeleteFile,
 }: SidebarType) => {
   return (
-    <Wrapper>
+    <Wrapper isVisible={isToggle}>
       <Header>
         <LogoLink href='/'>
           <Logo>
