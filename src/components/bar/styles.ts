@@ -76,3 +76,17 @@ export const Logo = styled.figure`
     width: 100%;
   }
 `
+
+export const SwitchPreview = styled.div`${({ theme }) => css`
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  button {
+    color: ${theme.colors.white};
+    background-color: transparent;
+
+    &:focus,
+    &:hover { background-color: transparent }
+  }
+`}`
