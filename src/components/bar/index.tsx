@@ -1,3 +1,6 @@
+/* ------| Medias |------- */
+import LogoImage from 'media/img/logo.png'
+
 /* ------| Estilos |------- */
 import {
   Container,
