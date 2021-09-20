@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 /* ------| Componentes |------ */
+import { Bar } from 'components/bar'
 import { Content } from 'components/content'
 import { EmptyContent } from 'components/empty'
 import { Sidebar } from 'components/sidebar'
