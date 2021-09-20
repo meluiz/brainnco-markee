@@ -18,6 +18,7 @@ import {
 /* ------| Tipagem |------- */
 type BarType = {
   setToggleMenu: Dispatch<SetStateAction<boolean>>
+  switchPreview: boolean
   setSwitchPreview: Dispatch<SetStateAction<boolean>>
 }
 
