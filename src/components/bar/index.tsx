@@ -23,7 +23,7 @@ export const Bar = ({ setToggleMenu }: BarType) => {
   return (
     <Wrapper>
       <Container>
-        <Column>
+        <Column posYItems='center' posXItems='start'>
           <ToggleMenu>
             <Button
               styleType='none'
@@ -41,7 +41,7 @@ export const Bar = ({ setToggleMenu }: BarType) => {
             </Logo>
           </LogoLink>
         </Column>
-        <Column />
+        <Column posYItems='center' posXItems='end' />
       </Container>
     </Wrapper>
   )
