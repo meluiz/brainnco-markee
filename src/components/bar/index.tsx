@@ -1,6 +1,6 @@
 /* ------| Medias |------- */
 import { Button } from 'components/button'
-import { EyeIcon, EyeOffIcon, MenuIcon, SwitchIcon } from 'components/icons'
+import { EyeIcon, EyeOffIcon, MenuIcon } from 'components/icons'
 import LogoImage from 'media/img/logo.png'
 import { Dispatch, SetStateAction } from 'react'
 
