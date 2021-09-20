@@ -7,8 +7,8 @@ import { Btn } from './styles'
 type ButtonType = {
   children?: ReactNode
   type?: 'button' | 'submit' | 'reset'
-  styleType: 'primary' | 'none'
-  onClick?: (event?: MouseEvent<HTMLElement>) => void
+  styleType: 'primary' | 'simple'
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
 export const Button = ({
