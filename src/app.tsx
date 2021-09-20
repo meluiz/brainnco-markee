@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { useFiles } from 'hooks/files'
 
 /* ------| Componentes |------ */
 import { Bar } from 'components/bar'
 import { Content } from 'components/content'
 import { EmptyContent } from 'components/empty'
 import { Sidebar } from 'components/sidebar'
-import { useFiles } from 'hooks/files'
 
 /* ------| Estilos |------ */
 import { Container, Wrapper } from 'styles/layout'
