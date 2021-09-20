@@ -17,6 +17,7 @@ export type FileType = {
 }
 
 export const App = () => {
+  const [toggleMenu, setToggleMenu] = useState<boolean>(false)
   const {
     inputRef,
     textareaRef,
@@ -30,9 +31,11 @@ export const App = () => {
 
   return (
     <Wrapper>
+      <Bar setToggleMenu={setToggleMenu} />
       <Container>
         <Sidebar
           files={files}
+          isToggle={toggleMenu}
           handleActiveFile={handleActiveFile}
           handleCreateFile={handleCreateFile}
           handleDeleteFile={handleDeleteFile}
