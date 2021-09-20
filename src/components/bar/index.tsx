@@ -36,7 +36,7 @@ export const Bar = ({
         <Column posYItems='center' posXItems='start'>
           <ToggleMenu>
             <Button
-              styleType='none'
+              styleType='simple'
               type='button'
               onClick={() => setToggleMenu(isToggle => !isToggle)}
             >
@@ -54,7 +54,7 @@ export const Bar = ({
         <Column posYItems='center' posXItems='end'>
           <SwitchPreview>
             <Button
-              styleType='none'
+              styleType='simple'
               type='button'
               onClick={() => setSwitchPreview(switchPreview => !switchPreview)}
             >
