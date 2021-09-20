@@ -15,7 +15,11 @@ import {
 } from './styles'
 
 /* ------| Tipagem |------- */
-export const Bar = () => {
+type BarType = {
+  setToggleMenu: Dispatch<SetStateAction<boolean>>
+}
+
+export const Bar = ({ setToggleMenu }: BarType) => {
   return (
     <Wrapper>
       <Container>
@@ -24,6 +28,7 @@ export const Bar = () => {
             <Button
               styleType='none'
               type='button'
+              onClick={() => setToggleMenu(isToggle => !isToggle)}
             >
               <MenuIcon size={24} />
             </Button>
