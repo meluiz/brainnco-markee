@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react'
+import { Dispatch, MouseEvent, SetStateAction } from 'react'
 
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
@@ -27,10 +27,11 @@ import {
 /* ------| Tipagem |------ */
 import { FileType } from 'app'
 type SidebarType = {
-  files: FileType[],
-  isToggle: boolean,
-  handleCreateFile: () => void,
-  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void,
+  files: FileType[]
+  isToggle: boolean
+  setToggle: Dispatch<SetStateAction<boolean>>
+  handleCreateFile: () => void
+  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void
   handleDeleteFile: (id: string, event: MouseEvent<HTMLElement>) => void
 }
 
@@ -91,7 +92,9 @@ export const Sidebar = ({
             <NavigationListItem key={file.id} active={file.active}>
               <NavigationListLink
                 href='/#'
-                onClick={(event) => handleActiveFile(file.id, event)}
+                onClick={(event) => {
+                  handleActiveFile(file.id, event)
+                }}
               >
                 <NavigationListLinkFilename>
                   <div className='icon'>
