@@ -11,8 +11,13 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   height: 100%;
-  display: grid;
-  grid-template-columns: 332px 1fr;
-  grid-template-areas: 'Sidebar Content';
+  display: flex;
+  flex-direction: column;
   position: relative;
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 332px 1fr;
+    grid-template-areas: 'Sidebar Content';
+  }
 `

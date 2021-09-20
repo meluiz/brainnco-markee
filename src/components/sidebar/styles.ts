@@ -5,15 +5,34 @@ type NavigationListItemType = {
   active: boolean
 }
 
-export const Wrapper = styled.aside`${({ theme }) => css`
-  grid-area: Sidebar;
+export const Wrapper = styled.aside<WrapperType>`${({ theme, isVisible }) => css`
+  width: 100%;
+  max-width: 388px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   flex-grow: 0;
-  position: relative;
+  position: absolute;
+  top: 0; left: 0;
   background-color: ${theme.colors.black};
   overflow: hidden;
+  z-index: 999;
+  transition: all 300ms ease;
+  transform: translate3d(-100%, 0, 0);
+
+  ${isVisible && css`
+    transform: translate3d(0,0,0);
+  `}
+
+  @media screen and (min-width: 1024px) {
+    width: initial;
+    height: initial;
+    grid-area: Sidebar;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 `}`
 
 export const Header = styled.header`
