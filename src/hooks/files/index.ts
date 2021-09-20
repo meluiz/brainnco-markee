@@ -109,6 +109,8 @@ export const useFiles = () => {
 
   const handleDeleteFile = (id: string, event: MouseEvent<HTMLElement>) => {
     event.stopPropagation()
+    event.preventDefault()
+
     const activeFile = files.find(file => file.active === true)
 
     setFiles((oldFiles) =>

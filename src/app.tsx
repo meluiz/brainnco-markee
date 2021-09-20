@@ -1,8 +1,11 @@
+import { useState } from 'react'
+import { useFiles } from 'hooks/files'
+
 /* ------| Componentes |------ */
+import { Bar } from 'components/bar'
 import { Content } from 'components/content'
 import { EmptyContent } from 'components/empty'
 import { Sidebar } from 'components/sidebar'
-import { useFiles } from 'hooks/files'
 
 /* ------| Estilos |------ */
 import { Container, Wrapper } from 'styles/layout'
@@ -17,6 +20,8 @@ export type FileType = {
 }
 
 export const App = () => {
+  const [toggleMenu, setToggleMenu] = useState<boolean>(false)
+  const [switchPreview, setSwitchPreview] = useState<boolean>(false)
   const {
     inputRef,
     textareaRef,
@@ -30,9 +35,16 @@ export const App = () => {
 
   return (
     <Wrapper>
+      <Bar
+        switchPreview={switchPreview}
+        setToggleMenu={setToggleMenu}
+        setSwitchPreview={setSwitchPreview}
+      />
       <Container>
         <Sidebar
           files={files}
+          isToggleMenu={toggleMenu}
+          setToggleMenu={setToggleMenu}
           handleActiveFile={handleActiveFile}
           handleCreateFile={handleCreateFile}
           handleDeleteFile={handleDeleteFile}
@@ -42,6 +54,7 @@ export const App = () => {
               file={files.find(file => file.active === true)}
               inputRef={inputRef}
               textareaRef={textareaRef}
+              switchPreview={switchPreview}
               handleUpdateFilename={handleUpdateFilename}
               handleUpdateContent={handleUpdateContent}
             />

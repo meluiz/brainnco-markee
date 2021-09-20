@@ -24,6 +24,7 @@ type ContentType = {
   file?: FileType
   inputRef?: RefObject<HTMLInputElement>
   textareaRef?: RefObject<HTMLTextAreaElement>
+  switchPreview: boolean
   handleUpdateFilename: (id: string, event: ChangeEvent<HTMLInputElement>) => void,
   handleUpdateContent: (id: string, event: ChangeEvent<HTMLTextAreaElement>) => void,
 }
@@ -47,6 +48,7 @@ export const Content = ({
   file,
   inputRef,
   textareaRef,
+  switchPreview,
   handleUpdateFilename,
   handleUpdateContent,
 }: ContentType) => {
@@ -67,7 +69,7 @@ export const Content = ({
               event && file?.id && handleUpdateFilename(file.id, event)}
           />
         </Header>
-        <MarkdownEditor>
+        <MarkdownEditor isPreview={switchPreview}>
           <Editor>
             <Textarea
               reference={textareaRef}

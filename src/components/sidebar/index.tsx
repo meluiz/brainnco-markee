@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react'
+import { Dispatch, MouseEvent, SetStateAction } from 'react'
 
 /* ------| Componentes |------ */
 import { Button } from 'components/button'
@@ -28,19 +28,23 @@ import {
 import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
-  handleCreateFile: () => void,
-  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void,
+  isToggleMenu: boolean
+  setToggleMenu: Dispatch<SetStateAction<boolean>>
+  handleCreateFile: () => void
+  handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void
   handleDeleteFile: (id: string, event: MouseEvent<HTMLElement>) => void
 }
 
 export const Sidebar = ({
   files,
+  isToggleMenu,
+  setToggleMenu,
   handleCreateFile,
   handleActiveFile,
   handleDeleteFile,
 }: SidebarType) => {
   return (
-    <Wrapper>
+    <Wrapper isVisible={isToggleMenu}>
       <Header>
         <LogoLink href='/'>
           <Logo>
@@ -89,7 +93,10 @@ export const Sidebar = ({
             <NavigationListItem key={file.id} active={file.active}>
               <NavigationListLink
                 href='/#'
-                onClick={(event) => handleActiveFile(file.id, event)}
+                onClick={(event) => {
+                  handleActiveFile(file.id, event)
+                  setToggleMenu(false)
+                }}
               >
                 <NavigationListLinkFilename>
                   <div className='icon'>

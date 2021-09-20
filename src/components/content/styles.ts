@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components'
 
+type MarkdownEditorType = {
+  isPreview: boolean
+}
+
 export const Wrapper = styled.main`${({ theme }) => css`
   grid-area: Content;
   position: relative;
@@ -45,19 +49,47 @@ export const HeaderIcon = styled.div`${({ theme }) => css`
   color: ${theme.colors.primary};
 `}`
 
-export const MarkdownEditor = styled.div`
+export const MarkdownEditor = styled.div<MarkdownEditorType>`
   width: 100%;
-  min-height: calc(100vh - 96px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'Editor Preview';
-  padding: 12px 0;
+  height: calc(100vh - 96px);
+
+  ${({ isPreview }) => isPreview
+  ? css`
+      ${Editor} { display: none }
+      ${Preview} { display: block }
+    `
+  : css`
+      ${Editor} { display: block }
+      ${Preview} { display: none }
+  `}
+  
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'Editor Preview';
+    padding: 12px 0;
+
+    ${({ isPreview }) => isPreview
+    ? css`
+        ${Editor} { display: block }
+        ${Preview} {display: block }
+      `
+    : css`
+        ${Editor} { display: block }
+        ${Preview} { display: block }
+    `}
+  }
 `
 
 export const Editor = styled.div`
-  grid-area: Editor;
-  padding-right: 12px;
-  border-right: 1px solid rgba(30, 41, 59, 0.12);
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 1024px) {
+    grid-area: Editor;
+    padding-right: 12px;
+    border-right: 1px solid rgba(30, 41, 59, 0.12);
+  }
   
   textarea {
     width: 100%;
@@ -68,9 +100,12 @@ export const Editor = styled.div`
 
 export const Preview = styled.div`
   word-break: break-all;
-  padding-left: 12px;
-  grid-area: Preview;
   line-height: 1.5;
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 12px;
+    grid-area: Preview;
+  }
 
   h1, h2,
   h3, h4,

@@ -1,5 +1,6 @@
-/* ------| Estilos |------ */
 import { ChangeEvent, RefObject } from 'react'
+
+/* ------| Estilos |------ */
 import { Inpt } from './styles'
 
 /* ------| Tipagem |------ */
