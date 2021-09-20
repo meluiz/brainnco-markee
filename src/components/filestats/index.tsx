@@ -10,17 +10,9 @@ type FileStatsType = {
 export const FileStats = ({ stats }: FileStatsType) => {
   return (
     <Wrapper>
-      {stats === 'editing' && (
-        <Editing />
-      )}
-
-      {stats === 'saving' && (
-        <SavingIcon size={13} />
-      )}
-
-      {stats === 'saved' && (
-        <SavedIcon size={13} />
-      )}
+      {stats === 'editing' && <Editing />}
+      {stats === 'saving' && <SavingIcon size={13} />}
+      {stats === 'saved' && <SavedIcon size={13} />}
     </Wrapper>
   )
 }
