@@ -1,6 +1,6 @@
 /* ------| Medias |------- */
 import { Button } from 'components/button'
-import { MenuIcon, SwitchIcon } from 'components/icons'
+import { EyeIcon, EyeOffIcon, MenuIcon, SwitchIcon } from 'components/icons'
 import LogoImage from 'media/img/logo.png'
 import { Dispatch, SetStateAction } from 'react'
 
@@ -55,7 +55,13 @@ export const Bar = ({
               type='button'
               onClick={() => setSwitchPreview(switchPreview => !switchPreview)}
             >
-              <SwitchIcon />
+              {switchPreview
+                ? (
+                  <EyeIcon />
+                  )
+                : (
+                  <EyeOffIcon />
+                  )}
             </Button>
           </SwitchPreview>
         </Column>
