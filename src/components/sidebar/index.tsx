@@ -94,6 +94,7 @@ export const Sidebar = ({
                 href='/#'
                 onClick={(event) => {
                   handleActiveFile(file.id, event)
+                  setToggle(false)
                 }}
               >
                 <NavigationListLinkFilename>
