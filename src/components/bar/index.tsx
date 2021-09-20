@@ -2,12 +2,12 @@ import { Dispatch, SetStateAction } from 'react'
 
 /* ------| Componentes |------- */
 import { Button } from 'components/button'
-import { EyeIcon, EyeOffIcon, MenuIcon } from 'components/icons'
 
 /* ------| Medias |------- */
 import LogoImage from 'media/img/logo.png'
 
 /* ------| Estilos |------- */
+import { EyeIcon, EyeOffIcon, MenuIcon } from 'components/icons'
 import {
   Column,
   Container,
