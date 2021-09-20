@@ -5,7 +5,8 @@ import LogoImage from 'media/img/logo.png'
 import {
   Container,
   LeftSide,
-  Wrapper,
+  Logo,
+  LogoLink,
 } from './styles'
 
 export const Bar = () => {
