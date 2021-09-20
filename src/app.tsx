@@ -35,7 +35,10 @@ export const App = () => {
 
   return (
     <Wrapper>
-      <Bar setToggleMenu={setToggleMenu} setSwitchPreview={setSwitchPreview} />
+      <Bar
+        setToggleMenu={setToggleMenu}
+        setSwitchPreview={setSwitchPreview}
+      />
       <Container>
         <Sidebar
           files={files}
