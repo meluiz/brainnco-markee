@@ -41,11 +41,15 @@ export const Wrapper = styled.aside<WrapperType>`${({ theme, isVisible }) => css
 
 export const Header = styled.header`
   min-height: 0;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  justify-content: center;
-  padding: 36px;
+  display: none;
+
+  @media screen and (min-width: 1024px) { 
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 36px;
+  }
 `
 
 export const LogoLink = styled.a`
@@ -75,8 +79,7 @@ export const Navigation = styled.nav`
 export const NavigationHeader = styled.div`${({ theme }) => css`
   width: 100%;
   height: 24px;
-  display: flex;
-  align-items: center;
+  display: none;
   flex-shrink: 0;
   padding: 0 14px;
   position: relative;
@@ -89,6 +92,11 @@ export const NavigationHeader = styled.div`${({ theme }) => css`
     left: 0; top: 50%;
     border-radius: 999px;
     background-color: ${theme.colors.primary};
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: center;
   }
 `}`
 
