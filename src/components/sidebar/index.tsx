@@ -107,7 +107,7 @@ export const Sidebar = ({
                 <NavigationListLinkStats>
                   <Button
                     styleType='none'
-                    onClick={(event) => event && handleDeleteFile(file.id, event)}
+                    onClick={(event) => handleDeleteFile(file.id, event)}
                   >
                     <XIcon />
                   </Button>
