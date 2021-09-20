@@ -38,6 +38,7 @@ type SidebarType = {
 export const Sidebar = ({
   files,
   isToggle,
+  setToggle,
   handleCreateFile,
   handleActiveFile,
   handleDeleteFile,
