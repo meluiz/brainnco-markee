@@ -10,7 +10,7 @@ type InputType = {
   value?: string
   placeholder?: string
   autoFocus?: boolean
-  onChange?: (event?: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
   reference?: RefObject<HTMLInputElement>
   type: 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' |
         'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' |

@@ -8,7 +8,7 @@ type TextareaType = {
   value?: string,
   placeholder?: string,
   reference?: RefObject<HTMLTextAreaElement>
-  onChange?: (event?: ChangeEvent<HTMLTextAreaElement>) => void
+  onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void
   resize?: 'none' | 'both' | 'horizontal' | 'vertical' | 'block' | 'inline'
 }
 
