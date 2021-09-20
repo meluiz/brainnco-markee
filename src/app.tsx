@@ -38,7 +38,8 @@ export const App = () => {
       <Container>
         <Sidebar
           files={files}
-          isToggle={toggleMenu}
+          setToggleMenu={setToggleMenu}
+          isToggleMenu={toggleMenu}
           handleActiveFile={handleActiveFile}
           handleCreateFile={handleCreateFile}
           handleDeleteFile={handleDeleteFile}
