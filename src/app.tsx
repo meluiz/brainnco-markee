@@ -21,6 +21,7 @@ export type FileType = {
 
 export const App = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false)
+  const [switchPreview, setSwitchPreview] = useState<boolean>(false)
   const {
     inputRef,
     textareaRef,
@@ -34,7 +35,7 @@ export const App = () => {
 
   return (
     <Wrapper>
-      <Bar setToggleMenu={setToggleMenu} />
+      <Bar setToggleMenu={setToggleMenu} setSwitchPreview={setSwitchPreview} />
       <Container>
         <Sidebar
           files={files}
@@ -49,6 +50,7 @@ export const App = () => {
               file={files.find(file => file.active === true)}
               inputRef={inputRef}
               textareaRef={textareaRef}
+              switchPreview={switchPreview}
               handleUpdateFilename={handleUpdateFilename}
               handleUpdateContent={handleUpdateContent}
             />

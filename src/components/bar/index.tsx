@@ -19,7 +19,7 @@ type BarType = {
   setToggleMenu: Dispatch<SetStateAction<boolean>>
 }
 
-export const Bar = ({ setToggleMenu }: BarType) => {
+export const Bar = ({ setToggleMenu, setSwitchPreview }: BarType) => {
   return (
     <Wrapper>
       <Container>
