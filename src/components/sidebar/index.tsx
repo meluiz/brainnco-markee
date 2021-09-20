@@ -28,8 +28,8 @@ import {
 import { FileType } from 'app'
 type SidebarType = {
   files: FileType[]
-  isToggle: boolean
-  setToggle: Dispatch<SetStateAction<boolean>>
+  isToggleMenu: boolean
+  setToggleMenu: Dispatch<SetStateAction<boolean>>
   handleCreateFile: () => void
   handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void
   handleDeleteFile: (id: string, event: MouseEvent<HTMLElement>) => void
@@ -37,14 +37,14 @@ type SidebarType = {
 
 export const Sidebar = ({
   files,
-  isToggle,
-  setToggle,
+  isToggleMenu,
+  setToggleMenu,
   handleCreateFile,
   handleActiveFile,
   handleDeleteFile,
 }: SidebarType) => {
   return (
-    <Wrapper isVisible={isToggle}>
+    <Wrapper isVisible={isToggleMenu}>
       <Header>
         <LogoLink href='/'>
           <Logo>
@@ -95,7 +95,7 @@ export const Sidebar = ({
                 href='/#'
                 onClick={(event) => {
                   handleActiveFile(file.id, event)
-                  setToggle(false)
+                  setToggleMenu(false)
                 }}
               >
                 <NavigationListLinkFilename>
