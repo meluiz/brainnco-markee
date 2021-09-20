@@ -27,7 +27,8 @@ import {
 /* ------| Tipagem |------ */
 import { FileType } from 'app'
 type SidebarType = {
-  files: FileType[]
+  files: FileType[],
+  isToggle: boolean,
   handleCreateFile: () => void,
   handleActiveFile: (id: string, event: MouseEvent<HTMLElement>) => void,
   handleDeleteFile: (id: string, event: MouseEvent<HTMLElement>) => void
