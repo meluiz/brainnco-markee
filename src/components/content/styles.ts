@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components'
 
+type MarkdownEditorType = {
+  isPreview: boolean
+}
+
 export const Wrapper = styled.main`${({ theme }) => css`
   grid-area: Content;
   position: relative;
@@ -45,7 +49,7 @@ export const HeaderIcon = styled.div`${({ theme }) => css`
   color: ${theme.colors.primary};
 `}`
 
-export const MarkdownEditor = styled.div`
+export const MarkdownEditor = styled.div<MarkdownEditorType>`
   width: 100%;
   min-height: calc(100vh - 96px);
   display: grid;
