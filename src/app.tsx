@@ -36,6 +36,7 @@ export const App = () => {
   return (
     <Wrapper>
       <Bar
+        switchPreview={switchPreview}
         setToggleMenu={setToggleMenu}
         setSwitchPreview={setSwitchPreview}
       />

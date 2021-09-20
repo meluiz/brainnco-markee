@@ -24,6 +24,7 @@ type BarType = {
 
 export const Bar = ({
   setToggleMenu,
+  switchPreview,
   setSwitchPreview,
 }: BarType) => {
   return (
