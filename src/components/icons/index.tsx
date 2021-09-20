@@ -90,3 +90,37 @@ export const SavedIcon = ({ size = 24 }: IconType) => {
     </Saved>
   )
 }
+
+export const MenuIcon = ({ size = 24 }: IconType) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      viewBox='0 0 24 24'
+      strokeWidth='1.5'
+      stroke='currentColor'
+      fill='none'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    >
+      <path
+        stroke='none'
+        d='M0 0h24v24H0z'
+        fill='none'
+      />
+      <line
+        x1='4'
+        y1='8'
+        x2='20'
+        y2='8'
+      />
+      <line
+        x1='4'
+        y1='16'
+        x2='20'
+        y2='16'
+      />
+    </svg>
+  )
+}
