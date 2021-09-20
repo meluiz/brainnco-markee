@@ -1,6 +1,6 @@
 /* ------| Medias |------- */
 import { Button } from 'components/button'
-import { MenuIcon } from 'components/icons'
+import { MenuIcon, SwitchIcon } from 'components/icons'
 import LogoImage from 'media/img/logo.png'
 import { Dispatch, SetStateAction } from 'react'
 
@@ -18,6 +18,7 @@ import {
 /* ------| Tipagem |------- */
 type BarType = {
   setToggleMenu: Dispatch<SetStateAction<boolean>>
+  setSwitchPreview: Dispatch<SetStateAction<boolean>>
 }
 
 export const Bar = ({ setToggleMenu, setSwitchPreview }: BarType) => {
