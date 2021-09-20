@@ -10,6 +10,7 @@ import {
   Container,
   Logo,
   LogoLink,
+  SwitchPreview,
   ToggleMenu,
   Wrapper,
 } from './styles'
@@ -41,7 +42,17 @@ export const Bar = ({ setToggleMenu, setSwitchPreview }: BarType) => {
             </Logo>
           </LogoLink>
         </Column>
-        <Column posYItems='center' posXItems='end' />
+        <Column posYItems='center' posXItems='end'>
+          <SwitchPreview>
+            <Button
+              styleType='none'
+              type='button'
+              onClick={() => setSwitchPreview(switchPreview => !switchPreview)}
+            >
+              <SwitchIcon />
+            </Button>
+          </SwitchPreview>
+        </Column>
       </Container>
     </Wrapper>
   )
