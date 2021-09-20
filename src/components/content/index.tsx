@@ -67,7 +67,7 @@ export const Content = ({
               event && file?.id && handleUpdateFilename(file.id, event)}
           />
         </Header>
-        <MarkdownEditor>
+        <MarkdownEditor isPreview={false}>
           <Editor>
             <Textarea
               reference={textareaRef}
