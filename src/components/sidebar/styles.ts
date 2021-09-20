@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 
 /* ------| Tipagem |------ */
+type WrapperType = {
+  isVisible: boolean
+}
+
 type NavigationListItemType = {
   active: boolean
 }
