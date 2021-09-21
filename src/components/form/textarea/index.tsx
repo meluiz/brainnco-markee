@@ -26,6 +26,7 @@ export const Textarea = ({
       placeholder={placeholder}
       value={`${value}`}
       onChange={onChange}
+      spellCheck={false}
     />
   )
 }
