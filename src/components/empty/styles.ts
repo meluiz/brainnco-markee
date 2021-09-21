@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.main`${({ theme }) => css`
   grid-area: Content;
+  height: calc(100% - 56px);
   display: flex;
   flex-direction: column;
   align-items: center;
