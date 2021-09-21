@@ -95,6 +95,7 @@ export const Editor = styled.div`
     width: 100%;
     min-height: 100%;
     line-height: 1.5;
+    color: #3a3a3f;
   }
 `
 
