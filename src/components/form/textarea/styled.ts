@@ -9,7 +9,7 @@ export const Area = styled.textarea<TextareaType>`${({ resize }) => css`
   min-width: 112px;
   border: 0;
   background-color: transparent;
-  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 
   ${resize && css`
     resize: ${resize};
