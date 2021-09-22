@@ -22,7 +22,6 @@ export const Wrapper = styled.main`${({ theme }) => css`
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100%;
   display: block;
   position: relative;
   padding: 8px 24px;
@@ -51,7 +50,7 @@ export const HeaderIcon = styled.div`${({ theme }) => css`
 
 export const MarkdownEditor = styled.div<MarkdownEditorType>`
   width: 100%;
-  height: calc(100vh - 96px);
+  height: calc(100vh - (96px + 56px));
 
   ${({ isPreview }) => isPreview
   ? css`
