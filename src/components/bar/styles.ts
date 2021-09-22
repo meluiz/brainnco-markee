@@ -11,7 +11,6 @@ export const Wrapper = styled.div`${({ theme }) => css`
   height: 56px;
   display: block;
   position: relative;
-  top: 0; left: 0;
   background-color: ${theme.colors.black};
 
   @media screen and (min-width: 1024px) {

@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     border: 0;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
   }
 
   :focus {

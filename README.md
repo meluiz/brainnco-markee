@@ -1,46 +1,120 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="https://i.imgur.com/xKVnXal.png" alt="Markee App" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+# Markee App
 
-In the project directory, you can run:
+<p align="left">
+  <a aria-label="Vercel Logo" href="https://vercel.com/">
+    <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  
+  
+  <a aria-label="Vercel Logo" href="https://vercel.com/">
+    <img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" />
+  </a>
+  
+  <a aria-label="ReactJS Logo" href="https://pt-br.reactjs.org/">
+    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+  </a>
 
-### `yarn start`
+  <a aria-label="Styled Components Logo" href="https://styled-components.com/">
+    <img alt="" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+  </a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Markee App é um projeto desenvolvido através do bootcamp da Brainn Co.. Com ele é possivel ter um visualização do seu texto em markdown em tempo real.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[https://markee.vercel.app/](https://markee.vercel.app/)
 
-### `yarn test`
+### Build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+```bash
+# Instalando dependências
+yarn install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Servidor com reload automático em http://localhost:3000
+yarn dev
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Build para produção
+yarn build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deploy na Vercel
 
-### `yarn eject`
+> A Vercel é a plataformas que possui uma das maneiras mais fáceis de implementação de um site em produção.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 1. Novo projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Você irá clicar no botão "New Project" localizado na lateral direita do site.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###### *Observação: É necessário fazer a autenticação no site. É recomendado a autênticação com alguma plataforma Git.*
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 2. Importando seu projeto do Git
 
-## Learn More
+Em seguida, você irá importar a aplicação na plataforma Git através do botão "import" localizado à direita do seu projeto. É possivel que ele peça permissão para ter acesso ao seus repositórios.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 3. Criação de um time
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Após importar a aplicação, irá aparecer uma opção para criação de um time. Não será necessário nesse momento, então você pode clicar botão "Skip".
+
+#### 4. Configuração e deploy
+
+Para finalizar, irá aparecer as configurações do seu projeto. A Vercel automaticamente indentifica um project React.JS e o configura.
+Sendo assim, você pode pular essa parte e clicar no botão "Deploy" localizado ao fim da configuração do projeto.
+
+###### *Observação: Vale se atentar ao Project Name, do qual se refere ao nome do seu projeto.*
+
+#### 5. Pronto
+
+Pronto! Só aguardar a Vercel finalizar o deploy do seu projeto. Ao final do processo, ela te enviará para uma página de sucesso com a url da sua aplicação. 
+
+<hr />
+
+### Deploy na Netlify
+
+> A Netlify possui o objetivo de construir uma plataforma perfeita e unificada que automatiza código; criação sites e web-apps de alta performance e de fácil manutenção.
+
+#### 1. Novo projeto
+
+Você irá clicar no botão "New site from git" localizado na lateral direita do site.
+
+###### *Observação: É necessário fazer a autenticação no site. É recomendado a autênticação com alguma plataforma Git.*
+
+#### 2. Selecionando a plataforma Git
+
+Irá aparecer para você três opções de plataformas git. Selecione a plataforma onde está localizado o repositório do seu projeto.
+
+#### 3. Importando o projeto
+
+Após a sua escolha, você poderá visualizar todos o seus repositórios habilitados na Netlify. Selecione o repositório do seu projeto.
+
+###### *Caso não encontre o respositório do seu projeto, haverá uma opção logo abaixo: "Configure the Netlify app on GitHub". Clique nela e em seguinda permita que a Netlify acesse seu repositório.*
+
+#### 4. Configuração e deploy
+
+Para finalizar, irá aparecer as configurações do seu projeto. Assim como a Vercel, a Netlify pré-configura seu projeto automáticamente. Sendo assim, clique no botão "Deploy" localizado ao fim da configuração.
+
+#### 5. Pronto
+
+Pronto! Só aguardar a Netlify finalizar o deploy do seu projeto.
+
+<hr />
+
+### Autor
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/meluiz">
+        <img src="https://avatars.githubusercontent.com/u/52682525?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <b>Luiz Felipe</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>

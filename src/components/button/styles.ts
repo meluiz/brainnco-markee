@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 type BtnType = {
-  styleType: 'primary' | 'none'
+  styleType: 'primary' | 'simple'
 }
 
 export const Btn = styled.button<BtnType>`${({ theme, styleType }) => css`
@@ -13,9 +13,9 @@ export const Btn = styled.button<BtnType>`${({ theme, styleType }) => css`
   border-radius: 4px;
   cursor: pointer;
   font-size: 1.6rem;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 
-  ${styleType === 'none' && css`
+  ${styleType === 'simple' && css`
     color: white;
     background-color: transparent;
 

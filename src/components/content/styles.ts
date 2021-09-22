@@ -95,6 +95,7 @@ export const Editor = styled.div`
     width: 100%;
     min-height: 100%;
     line-height: 1.5;
+    color: #3a3a3f;
   }
 `
 
@@ -142,7 +143,7 @@ export const Preview = styled.div`
   p code {
     border-radius: 2px;
     padding: 2px 6px;
-    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
     background-color: rgba(0,0,0,.03);
   }
 
@@ -153,6 +154,6 @@ export const Preview = styled.div`
     border-radius: 6px;
     margin: 12px 0;
     font-size: 1.5rem;
-    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
   }
 `

@@ -7,5 +7,5 @@ export const Inpt = styled.input`${({ theme }) => css`
   font-size: 1.6rem;
   background-color: transparent;
   color: ${theme.colors.black};
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 `}`

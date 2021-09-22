@@ -65,8 +65,7 @@ export const Content = ({
             value={file?.name}
             placeholder='Nomeie seu arquivo....'
             autoFocus
-            onChange={(event) =>
-              event && file?.id && handleUpdateFilename(file.id, event)}
+            onChange={(event) => file?.id && handleUpdateFilename(file.id, event)}
           />
         </Header>
         <MarkdownEditor isPreview={switchPreview}>
@@ -76,8 +75,7 @@ export const Content = ({
               resize='none'
               value={file?.content}
               placeholder='Era uma vez...'
-              onChange={(event) =>
-                event && file?.id && handleUpdateContent(file.id, event)}
+              onChange={(event) => file?.id && handleUpdateContent(file.id, event)}
             />
           </Editor>
           <Preview

@@ -31,12 +31,12 @@ export const Bar = ({
   setSwitchPreview,
 }: BarType) => {
   return (
-    <Wrapper>
+    <Wrapper data-hide-during-focus='false'>
       <Container>
         <Column posYItems='center' posXItems='start'>
           <ToggleMenu>
             <Button
-              styleType='none'
+              styleType='simple'
               type='button'
               onClick={() => setToggleMenu(isToggle => !isToggle)}
             >
@@ -54,17 +54,11 @@ export const Bar = ({
         <Column posYItems='center' posXItems='end'>
           <SwitchPreview>
             <Button
-              styleType='none'
+              styleType='simple'
               type='button'
               onClick={() => setSwitchPreview(switchPreview => !switchPreview)}
             >
-              {switchPreview
-                ? (
-                  <EyeIcon />
-                  )
-                : (
-                  <EyeOffIcon />
-                  )}
+              {switchPreview ? <EyeIcon /> : <EyeOffIcon />}
             </Button>
           </SwitchPreview>
         </Column>
