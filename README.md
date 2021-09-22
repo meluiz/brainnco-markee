@@ -27,7 +27,7 @@
 
 > Markee App é um projeto desenvolvido através do bootcamp da Brainn Co.. Com ele é possivel ter um visualização do seu texto em markdown em tempo real.
 
-[https://markee.vercel.app/](https://markee.vercel.app/)
+[https://markee.meluiz.com/](https://markee.meluiz.com/)
 
 ### Build
 
